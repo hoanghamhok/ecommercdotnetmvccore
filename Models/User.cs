@@ -12,6 +12,7 @@ namespace MYWEBAPI.Models{
 
         public string Username { get; set; } = string.Empty;
         [Required]
+        [Column("PasswordHash")]
         public string Password { get; set; } = string.Empty;
         [Required]
         [MaxLength(100)]

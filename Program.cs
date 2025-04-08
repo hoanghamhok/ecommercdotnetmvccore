@@ -3,8 +3,10 @@ using MYWEBAPI.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 
+builder.Services.AddControllers();
 // Add services to the container.
-builder.Services.AddOpenApi();
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
 
 // ✅ Add DbContext BEFORE builder.Build()
 builder.Services.AddDbContext<AppDbContext>(options =>
@@ -15,8 +17,11 @@ var app = builder.Build();
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
-    app.MapOpenApi();
+    app.UseSwagger();
+app.UseSwaggerUI();
 }
+
+app.UseRouting();
 
 app.MapControllers();
 app.UseHttpsRedirection();
