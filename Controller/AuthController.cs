@@ -3,12 +3,16 @@ using MYWEBAPI.Data;
 using MYWEBAPI.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.IdentityModel.Tokens;
+using System.IdentityModel.Tokens.Jwt;
+using System.Security.Claims;
+using System.Text;
 namespace MYWEBAPI.Controllers
 {
 [ApiController]
 [Route("api/auth")]
 
-public class AuthController:Controllers{
+public class AuthController : Controller {
     private readonly AppDbContext _context;
     private readonly IConfiguration _config;//to read apssettings.json
     public AuthController(AppDbContext context)
@@ -45,7 +49,7 @@ public class AuthController:Controllers{
             issuer: _config["Jwt:Issuer"],
             audience: _config["Jwt:Audience"],
             claims: claims,
-            expires: DateTime.Now.AddMinutes(_config["Jwt:ExpiryInMinutes"]),
+            expires: DateTime.Now.AddMinutes(Convert.ToDouble(_config["Jwt:ExpiryInMinutes"])),
             signingCredentials: credentials
         );
         return new JwtSecurityTokenHandler().WriteToken(token);
