@@ -1,6 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using MYWEBAPI.Models;
 using Microsoft.Net.Http.Headers;
+using Models;
 
 namespace MYWEBAPI.Data
 {
@@ -10,5 +11,6 @@ namespace MYWEBAPI.Data
 
         }
         public DbSet<User> Users => Set<User>();
+        public DbSet<Categories> Categories { get; set; }
     }
 }
