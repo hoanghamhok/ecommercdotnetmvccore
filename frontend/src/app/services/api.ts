@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const API = axios.create({
-  baseURL: "http://localhost:5091/api"
+  baseURL: "http://localhost:5005/api"
 })
 
 //API lấy danh sách nhóm sản phẩm

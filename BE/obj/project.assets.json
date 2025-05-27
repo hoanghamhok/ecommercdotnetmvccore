@@ -4569,11 +4569,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\dkfbr\\Documents\\GitHub\\ecommercdotnetmvccore\\MyWebApi.csproj",
+      "projectUniqueName": "C:\\Users\\dkfbr\\Documents\\GitHub\\ecommercdotnetmvccore\\BE\\MyWebApi.csproj",
       "projectName": "MyWebApi",
-      "projectPath": "C:\\Users\\dkfbr\\Documents\\GitHub\\ecommercdotnetmvccore\\MyWebApi.csproj",
+      "projectPath": "C:\\Users\\dkfbr\\Documents\\GitHub\\ecommercdotnetmvccore\\BE\\MyWebApi.csproj",
       "packagesPath": "C:\\Users\\dkfbr\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\dkfbr\\Documents\\GitHub\\ecommercdotnetmvccore\\obj\\",
+      "outputPath": "C:\\Users\\dkfbr\\Documents\\GitHub\\ecommercdotnetmvccore\\BE\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\dkfbr\\AppData\\Roaming\\NuGet\\NuGet.Config"
