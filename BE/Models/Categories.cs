@@ -1,6 +1,6 @@
 using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
-namespace Models{
+namespace MYWEBAPI.Models{
     [Table("Categories")]
     public class Categories
     {

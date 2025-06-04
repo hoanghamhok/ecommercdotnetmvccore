@@ -1,7 +1,7 @@
 using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
-
-namespace Models
+using Models;
+namespace MYWEBAPI.Models
 {
     [Table("OrdersDetails")]
 public class OrdersDetails

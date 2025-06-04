@@ -1,40 +1,42 @@
-using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
-namespace Models
-{
+namespace MYWEBAPI.Models{
     [Table("Products")]
-public class Products
-{
-    [Key]
-    [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-    public int ProductId { get; set; }
 
-    [Required]
-    [MaxLength(100)]
-    public string ProductName { get; set; }
+    public class Products{
+        [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        public int Id {get; set;}
 
-    [Column(TypeName = "nvarchar(MAX)")] // Cho phép text dài
-    public string? Description { get; set; }
+        [Required]
+        [StringLength(100)]
+        [Column(TypeName = "varchar(100)")]
+        public string Name {get; set;}
 
-    [Required]
-    [Column(TypeName = "decimal(18,2)")]
-    public decimal Price { get; set; }
 
-    [Required]
-    public int StockQuantity { get; set; }
+        [StringLength(255)]
+        [Column(TypeName = "varchar(255)")]
+        public string Description {get; set;}
 
-    [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-    public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
+        [Required]
+        [Column(TypeName = "decimal(18,2)")]
+        public decimal Price {get; set;}
 
-    [Required]
-    [ForeignKey("CategoryId")]
-    public int CategoryId { get; set; }
-    public Categories Category { get; set; }
+        [Required]
+        [Column(TypeName = "int")]  
+        public int Instock {get; set;}
 
-    // Navigation properties
-    public ICollection<Reviews> Reviews { get; set; }
-    public ICollection<CartItems> CartItems { get; set; }
-    public ICollection<OrdersDetails> OrderDetails { get; set; }
-}
+        [Column(TypeName = "nvarchar(255)")]
+        public string? ImageUrl {get; set;}
+
+        [Required]
+        [ForeignKey("Categories")]
+        public int CategoryId {get; set;}
+
+        public Categories? Categories {get; set;}
+
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        public DateTime CreatedAt {get; set;} = DateTime.UtcNow;
+    }
 }
