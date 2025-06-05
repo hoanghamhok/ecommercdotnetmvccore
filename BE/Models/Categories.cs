@@ -12,7 +12,7 @@ namespace MYWEBAPI.Models{
         [Column(TypeName = "nvarchar(100)")]
         public string CategoryName { get; set; }
         public string? Description { get; set; }
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        //[DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public DateTime CreatedAt { get; set; } = DateTime.Now;
     }
 }

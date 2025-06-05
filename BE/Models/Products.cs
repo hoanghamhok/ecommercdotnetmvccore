@@ -33,10 +33,9 @@ namespace MYWEBAPI.Models{
         [Required]
         [ForeignKey("Categories")]
         public int CategoryId {get; set;}
-
         public Categories? Categories {get; set;}
 
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        //[DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public DateTime CreatedAt {get; set;} = DateTime.UtcNow;
     }
 }

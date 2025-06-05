@@ -297,6 +297,8 @@ C:\Users\dkfbr\Documents\GitHub\ecommercdotnetmvccore\BE\bin\Debug\net8.0\Azure.
 C:\Users\dkfbr\Documents\GitHub\ecommercdotnetmvccore\BE\bin\Debug\net8.0\Azure.Identity.dll
 C:\Users\dkfbr\Documents\GitHub\ecommercdotnetmvccore\BE\bin\Debug\net8.0\BCrypt.Net-Next.dll
 C:\Users\dkfbr\Documents\GitHub\ecommercdotnetmvccore\BE\bin\Debug\net8.0\Humanizer.dll
+C:\Users\dkfbr\Documents\GitHub\ecommercdotnetmvccore\BE\bin\Debug\net8.0\Microsoft.AspNetCore.JsonPatch.dll
+C:\Users\dkfbr\Documents\GitHub\ecommercdotnetmvccore\BE\bin\Debug\net8.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
 C:\Users\dkfbr\Documents\GitHub\ecommercdotnetmvccore\BE\bin\Debug\net8.0\Microsoft.AspNetCore.OpenApi.dll
 C:\Users\dkfbr\Documents\GitHub\ecommercdotnetmvccore\BE\bin\Debug\net8.0\Microsoft.Bcl.AsyncInterfaces.dll
 C:\Users\dkfbr\Documents\GitHub\ecommercdotnetmvccore\BE\bin\Debug\net8.0\Microsoft.CodeAnalysis.dll
@@ -322,6 +324,8 @@ C:\Users\dkfbr\Documents\GitHub\ecommercdotnetmvccore\BE\bin\Debug\net8.0\Micros
 C:\Users\dkfbr\Documents\GitHub\ecommercdotnetmvccore\BE\bin\Debug\net8.0\Microsoft.SqlServer.Server.dll
 C:\Users\dkfbr\Documents\GitHub\ecommercdotnetmvccore\BE\bin\Debug\net8.0\Microsoft.Win32.SystemEvents.dll
 C:\Users\dkfbr\Documents\GitHub\ecommercdotnetmvccore\BE\bin\Debug\net8.0\Mono.TextTemplating.dll
+C:\Users\dkfbr\Documents\GitHub\ecommercdotnetmvccore\BE\bin\Debug\net8.0\Newtonsoft.Json.dll
+C:\Users\dkfbr\Documents\GitHub\ecommercdotnetmvccore\BE\bin\Debug\net8.0\Newtonsoft.Json.Bson.dll
 C:\Users\dkfbr\Documents\GitHub\ecommercdotnetmvccore\BE\bin\Debug\net8.0\Swashbuckle.AspNetCore.Swagger.dll
 C:\Users\dkfbr\Documents\GitHub\ecommercdotnetmvccore\BE\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 C:\Users\dkfbr\Documents\GitHub\ecommercdotnetmvccore\BE\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerUI.dll
@@ -417,3 +421,4 @@ C:\Users\dkfbr\Documents\GitHub\ecommercdotnetmvccore\BE\obj\Debug\net8.0\refint
 C:\Users\dkfbr\Documents\GitHub\ecommercdotnetmvccore\BE\obj\Debug\net8.0\MyWebApi.pdb
 C:\Users\dkfbr\Documents\GitHub\ecommercdotnetmvccore\BE\obj\Debug\net8.0\MyWebApi.genruntimeconfig.cache
 C:\Users\dkfbr\Documents\GitHub\ecommercdotnetmvccore\BE\obj\Debug\net8.0\ref\MyWebApi.dll
+C:\Users\dkfbr\Documents\GitHub\ecommercdotnetmvccore\BE\bin\Debug\net8.0\MyWebApi.staticwebassets.runtime.json

@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const API = axios.create({
-  baseURL: "http://localhost:5091/api"
+  baseURL: "http://localhost:5005/api"
 })
 
 //API lấy danh sách nhóm sản phẩm
@@ -32,5 +32,17 @@ export const updateProduct = (id: number, data: any) =>
                   API.put(`/products/${id}`, data);
 export const deleteProduct = (id: number) => 
                   API.delete(`/products/${id}`);
+
+
+// Upload image
+export const uploadImage = (file: File) => {
+  const formData = new FormData();
+  formData.append('file', file);
+  return API.post('/files/upload', formData, {
+    headers: { "Content-Type": "multipart/form-data" }
+  });
+};
+
+
 
 export default API;
