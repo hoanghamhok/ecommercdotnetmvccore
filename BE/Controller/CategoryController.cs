@@ -3,7 +3,6 @@ using MYWEBAPI.Data;
 using MYWEBAPI.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Authorization;
-using Models;
 
 namespace MYWEBAPI.Controllers
 {

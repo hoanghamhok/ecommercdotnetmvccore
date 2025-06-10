@@ -1,6 +1,5 @@
 using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
-using Models;
 
 
 namespace MYWEBAPI.Models
@@ -31,7 +30,7 @@ public class OrdersDetails
     [Range(0.01, double.MaxValue, ErrorMessage = "Price must be greater than 0")]
     public decimal Price { get; set; }
 
-    [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+    // [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
     public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
 
     // Có thể thêm Discount nếu cần

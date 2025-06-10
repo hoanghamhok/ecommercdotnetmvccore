@@ -1,10 +1,11 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Authorization;
-using Models;
+using MYWEBAPI.Models;
+using MYWEBAPI.Data;
 
 namespace Controllers{
-    [Route("api/Cart")]
+    [Route("api/CartItems")]
     [ApiController]
     [Authorize]
     public class CartController : ControllerBase{
@@ -27,19 +28,19 @@ namespace Controllers{
                 return NotFound("Không tìm thấy sản phẩm.");
             
             //Kiểm tra xem sản phẩm có tồn tại trong giỏ hàng chưa
-            var existingCart = await _context.Carts.FirstOrDefaultAsync(
+            var existingCart = await _context.CartItems.FirstOrDefaultAsync(
                 c => c.UserId == userId && c.ProductId == request.ProductId);
             if (existingCart != null){
                 existingCart.Quantity += request.Quantity;
-                _context.Carts.Update(existingCart);
+                _context.CartItems.Update(existingCart);
             }else{
-                var cart = new Cart{
+                var cart = new CartItems{
                     UserId = (int)userId,
                     ProductId = request.ProductId,
                     Quantity = request.Quantity,
                     CreatedAt = DateTime.Now
                 };
-                _context.Carts.Add(cart);
+                _context.CartItems.Add(cart);
             }
             await _context.SaveChangesAsync();
             return Ok(new {message = "Thêm hàng vào giỏ hàng thành công."});
