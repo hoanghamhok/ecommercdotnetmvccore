@@ -1,7 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using MYWEBAPI.Models;
 using Microsoft.Net.Http.Headers;
-using Models;
 
 namespace MYWEBAPI.Data
 {

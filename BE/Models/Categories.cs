@@ -1,5 +1,7 @@
 using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
+using MYWEBAPI.Models;
+
 namespace MYWEBAPI.Models{
     [Table("Categories")]
     public class Categories

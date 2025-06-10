@@ -1,8 +1,8 @@
 using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
-using MYWEBAPI.Models;
 
-namespace Models
+
+namespace MYWEBAPI.Models
 {
     [Table("Orders")]
 public class Orders
@@ -24,7 +24,7 @@ public class Orders
     [StringLength(20)]
     public string OrderStatus { get; set; } = "Pending";
     
-    [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+    // [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
     public DateTime CreatedAt { get; set; } = DateTime.UtcNow;  // Nên dùng UtcNow
     
     // Quan hệ với OrderDetails (nếu có)

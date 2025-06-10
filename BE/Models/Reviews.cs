@@ -1,8 +1,7 @@
 using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
-using MYWEBAPI.Models;
 
-namespace Models
+namespace MYWEBAPI.Models
 {
     [Table("Reviews")]
 public class Reviews
@@ -22,7 +21,7 @@ public class Reviews
     [Range(1, 5)] // Giới hạn rating từ 1-5
     public int Rating { get; set; }
 
-    [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+    // [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
     public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
 
     [Required]

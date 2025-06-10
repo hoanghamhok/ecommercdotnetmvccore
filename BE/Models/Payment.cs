@@ -1,6 +1,8 @@
 using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
-namespace Models
+
+
+namespace MYWEBAPI.Models
 {
     [Table("Payments")]
 public class Payments
@@ -30,7 +32,7 @@ public class Payments
     [MaxLength(100)]
     public string TransactionId { get; set; }
 
-    [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+    // [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
     public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
 }
 }

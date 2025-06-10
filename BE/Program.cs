@@ -12,13 +12,14 @@ builder.Services.AddDbContext<AppDbContext>(options =>
     .GetConnectionString("DefaultConnection"))
 );
 
-builder.Services.AddCors(options => {
-    options.AddPolicy("AllowFrontend",
-        builder => builder
-            .WithOrigins("http://localhost:3000")
-            .AllowAnyHeader()
-            .AllowAnyMethod()
-    );
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowFrontend3000", policy =>
+    {
+        policy.WithOrigins("http://localhost:3000")
+              .AllowAnyHeader()
+              .AllowAnyMethod();
+    });
 });
 
 
@@ -34,7 +35,7 @@ var app = builder.Build();
 
 app.UseStaticFiles();
 
-app.UseCors("AllowFrontend");
+
 
 
 // Configure the HTTP request pipeline.
@@ -43,8 +44,8 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
-
-app.UseHttpsRedirection();
+app.UseCors("AllowFrontend3000");
+//app.UseHttpsRedirection();
 
 app.UseAuthorization();
 
